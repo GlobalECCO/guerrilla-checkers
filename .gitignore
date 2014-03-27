@@ -21,3 +21,6 @@ results
 node_modules
 npm-debug.log
 run.sh
+target
+bees-env.xml
+.gradle
