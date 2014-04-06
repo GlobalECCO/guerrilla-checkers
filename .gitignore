@@ -24,3 +24,4 @@ run.sh
 target
 bees-env.xml
 .gradle
+.idea
