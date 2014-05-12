@@ -390,10 +390,8 @@ ul li.separator {
 }
 
 .selected {
-  -webkit-animation: myanim 1s ease-in-out infinite; /* Saf5, Chrome */
-     -moz-animation: myanim 1s ease-in-out infinite; /* FF5+ */
-       -o-animation: myanim 1s ease-in-out infinite; /* Opera 12+ */
-          animation: myanim 1s ease-in-out infinite; /* Saf5, Chrome */
+  background-image: url('../images/soldier/soldier_piece_highlight.png') !important;
+  background-repeat: no-repeat;
 }
 
 @-webkit-keyframes myanim {
@@ -424,7 +422,61 @@ ul li.separator {
 
 #soldier_moves, #guerrilla_moves {
   visibility: hidden;
-  opacity: 0.5;
+  cursor: pointer;
+}
+
+.selectable {
+  cursor: pointer !important;
+  -webkit-animation:selectable 1000ms ease-in-out infinite;
+  -moz-animation:selectable 1000ms ease-in-out infinite;
+  -ms-animation:selectable 1000ms ease-in-out infinite;
+  -o-animation:selectable 1000ms ease-in-out infinite;
+  animation:selectable 1000ms ease-in-out infinite;
+}
+@keyframes selectable {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@-o-keyframes selectable {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes selectable {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes selectable {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes selectable {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .soldier_piece {
@@ -434,8 +486,17 @@ ul li.separator {
 	margin: 2px;
 }
 .coin_theme_soldier {
-  background: top left no-repeat url('../images/soldier/soldier_piece.png');
+  background-image: url('../images/soldier/soldier_piece.png');
+  background-repeat: no-repeat;
+
 }
+.coin_theme_soldier_glow {
+  background-image: url('../images/soldier/soldier_piece_ring.png');
+  background-repeat: no-repeat;
+  width: 68px;
+  height: 68px;
+}
+
 .guerrilla_theme_soldier {
   background: top left no-repeat url('../images/guerrilla/soldier_piece.png');
 }
@@ -449,7 +510,13 @@ ul li.separator {
 .guerrilla_shadow {
   width: 19px !important;
   height: 20px !important;
-  margin: 11px 11px 11px 12px !important;
+  margin: 11px 11px 11px 10px !important;
+  border: solid rgb(225, 225, 125) 2px;
+  border-radius: 100%;
+  -webkit-animation: myanim 1s ease-in-out infinite; /* Saf5, Chrome */
+  -moz-animation: myanim 1s ease-in-out infinite; /* FF5+ */
+  -o-animation: myanim 1s ease-in-out infinite; /* Opera 12+ */
+  animation: myanim 1s ease-in-out infinite; /* Saf5, Chrome */
 }
 
 .guerrilla_side #guerrilla_reserves {
