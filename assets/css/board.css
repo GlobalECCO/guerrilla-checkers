@@ -395,20 +395,40 @@ ul li.separator {
 }
 
 @-webkit-keyframes myanim {
-	0%, 100% { -webkit-transform: scale3d(1, 1, 1); zoom: 1; }
-	50%      { -webkit-transform: scale3d(1.2, 1.2, 1); zoom: 1; }
+  0%, 100% {
+    outline-color: rgba(225, 225, 125, .0);
+  }
+
+  50% {
+    outline-color: rgba(225, 225, 125, 1.0);
+  }
 }
 @-moz-keyframes myanim {
-	0%, 100% { -moz-transform: scale3d(1, 1, 1); zoom: 1; }
-	50%      { -moz-transform: scale3d(1.2, 1.2, 1); zoom: 1; }
+  0%, 100% {
+    outline-color: rgba(225, 225, 125, .0);
+  }
+
+  50% {
+    outline-color: rgba(225, 225, 125, 1.0);
+  }
 }
 @-o-keyframes myanim {
-	0%, 100% { -o-transform: scale3d(1, 1, 1); zoom: 1; }
-	50%      { -o-transform: scale3d(1.2, 1.2, 1); zoom: 1; }
+  0%, 100% {
+    outline-color: rgba(225, 225, 125, .0);
+  }
+
+  50% {
+    outline-color: rgba(225, 225, 125, 1.0);
+  }
 }
 @keyframes myanim {
-	0%, 100% { transform: scale3d(1, 1, 1); zoom: 1; }
-	50%      { transform: scale3d(1.2, 1.2, 1); zoom: 1; }
+  0%, 100% {
+    outline-color: rgba(225, 225, 125, .0);
+  }
+
+  50% {
+    outline-color: rgba(225, 225, 125, 1.0);
+  }
 }
 
 #soldier_moves div, #guerrilla_moves div {
@@ -507,16 +527,19 @@ ul li.separator {
   height: 30px;
   margin: 6px 6px 6px 7px;
 }
+
 .guerrilla_shadow {
   width: 19px !important;
   height: 20px !important;
-  margin: 11px 11px 11px 10px !important;
-  border: solid rgb(225, 225, 125) 2px;
-  border-radius: 100%;
-  -webkit-animation: myanim 1s ease-in-out infinite; /* Saf5, Chrome */
-  -moz-animation: myanim 1s ease-in-out infinite; /* FF5+ */
-  -o-animation: myanim 1s ease-in-out infinite; /* Opera 12+ */
-  animation: myanim 1s ease-in-out infinite; /* Saf5, Chrome */
+  margin: 11px 11px 12px 12px !important;
+}
+
+.guerrilla_theme_guerrilla_glow {
+  background-image: url('../images/guerrilla/guerrilla_piece_move.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 19px;
+  height: 20px;
 }
 
 .guerrilla_side #guerrilla_reserves {
@@ -587,7 +610,8 @@ ul li.separator {
 }
 
 .guerrilla_theme_guerrilla {
-  background: top left no-repeat url('../images/guerrilla/guerrilla_piece.png');
+  background-image: url('../images/guerrilla/guerrilla_piece.png');
+  background-repeat: no-repeat;
   background-size: 100%;
 }
 
