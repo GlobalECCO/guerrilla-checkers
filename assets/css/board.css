@@ -394,42 +394,6 @@ ul li.separator {
   background-repeat: no-repeat;
 }
 
-@-webkit-keyframes myanim {
-  0%, 100% {
-    outline-color: rgba(225, 225, 125, .0);
-  }
-
-  50% {
-    outline-color: rgba(225, 225, 125, 1.0);
-  }
-}
-@-moz-keyframes myanim {
-  0%, 100% {
-    outline-color: rgba(225, 225, 125, .0);
-  }
-
-  50% {
-    outline-color: rgba(225, 225, 125, 1.0);
-  }
-}
-@-o-keyframes myanim {
-  0%, 100% {
-    outline-color: rgba(225, 225, 125, .0);
-  }
-
-  50% {
-    outline-color: rgba(225, 225, 125, 1.0);
-  }
-}
-@keyframes myanim {
-  0%, 100% {
-    outline-color: rgba(225, 225, 125, .0);
-  }
-
-  50% {
-    outline-color: rgba(225, 225, 125, 1.0);
-  }
-}
 
 #soldier_moves div, #guerrilla_moves div {
   z-index: 300;
