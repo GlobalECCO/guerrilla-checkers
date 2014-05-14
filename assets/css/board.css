@@ -390,13 +390,14 @@ ul li.separator {
 }
 
 .selected {
-  background-image: url('../images/soldier/soldier_piece_highlight.png') !important;
-  background-repeat: no-repeat;
+  /*background-image: url('../images/soldier/soldier_piece_highlight.png') !important;*/
+  /*background-repeat: no-repeat;*/
 }
 
 
 #soldier_moves div, #guerrilla_moves div {
   z-index: 300;
+  opacity: 0.5;
 }
 
 #pieces {
@@ -411,13 +412,16 @@ ul li.separator {
 
 .selectable {
   cursor: pointer !important;
-  -webkit-animation:selectable 1000ms ease-in-out infinite;
-  -moz-animation:selectable 1000ms ease-in-out infinite;
-  -ms-animation:selectable 1000ms ease-in-out infinite;
-  -o-animation:selectable 1000ms ease-in-out infinite;
-  animation:selectable 1000ms ease-in-out infinite;
 }
-@keyframes selectable {
+
+.pulsing {
+  -webkit-animation:pulsing 1000ms ease-in-out infinite;
+  -moz-animation:pulsing 1000ms ease-in-out infinite;
+  -ms-animation:pulsing 1000ms ease-in-out infinite;
+  -o-animation:pulsing 1000ms ease-in-out infinite;
+  animation:pulsing 1000ms ease-in-out infinite;
+}
+@keyframes pulsing {
   0%, 100% {
     opacity: 0;
   }
@@ -426,7 +430,7 @@ ul li.separator {
     opacity: 1;
   }
 }
-@-o-keyframes selectable {
+@-o-keyframes pulsing {
   0%, 100% {
     opacity: 0;
   }
@@ -435,7 +439,7 @@ ul li.separator {
     opacity: 1;
   }
 }
-@-ms-keyframes selectable {
+@-ms-keyframes pulsing {
   0%, 100% {
     opacity: 0;
   }
@@ -444,7 +448,7 @@ ul li.separator {
     opacity: 1;
   }
 }
-@-moz-keyframes selectable {
+@-moz-keyframes pulsing {
   0%, 100% {
     opacity: 0;
   }
@@ -453,7 +457,7 @@ ul li.separator {
     opacity: 1;
   }
 }
-@-webkit-keyframes selectable {
+@-webkit-keyframes pulsing {
   0%, 100% {
     opacity: 0;
   }
@@ -469,16 +473,33 @@ ul li.separator {
 	height: 68px;
 	margin: 2px;
 }
+
+.soldier_shadow {
+  margin: 11px;
+  width: 45px;
+  height: 50px;
+  background-size: 50px auto;
+}
+
 .coin_theme_soldier {
   background-image: url('../images/soldier/soldier_piece.png');
   background-repeat: no-repeat;
 
 }
 .coin_theme_soldier_glow {
+  background-image: url('../images/soldier/soldier_piece_highlight.png');
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+  width: 68px;
+  height: 68px;
+}
+
+.coin_theme_soldier_ring {
   background-image: url('../images/soldier/soldier_piece_ring.png');
   background-repeat: no-repeat;
   width: 68px;
   height: 68px;
+  margin: 0px;
 }
 
 .guerrilla_theme_soldier {
