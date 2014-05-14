@@ -1,5 +1,5 @@
 * {
-	font-family: Arial;
+  font-family: Arial;
 }
 
 a {
@@ -7,13 +7,14 @@ a {
 }
 
 div  {
-	padding: 0px;
-	margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
-	background: #111;
+  background: #111;
   color: white;
+  margin: 0px;
 }
 
 #chat {
@@ -89,6 +90,9 @@ body {
 }
 .chat_message.coin span {
   color: rgb(63, 77, 89);
+}
+.chat_message {
+  cursor: default;
 }
 
 #settings_overlay {
@@ -296,8 +300,6 @@ ul li.separator {
 .coin_side {
   background: top left no-repeat url('../images/soldier/side.jpg');
 }
-
-
 
 .guerrilla_side #soldier_status {
   position: relative;
@@ -551,11 +553,11 @@ ul li.separator {
   z-index: 1000;
 }
 
-.guerrilla_side .guerrilla_reserve {
-  width: 25px !important;
-  height: 25px !important;
-  margin: 0px !important;
-  background-size: 100% !important;
+.guerrilla_reserve {
+  width: 25px;
+  height: 25px;
+  margin: 0px;
+  background-size: 100%;
 }
 
 .coin_side #guerrilla_reserves {
@@ -671,9 +673,10 @@ ul li.separator {
 
 .dashboard_section .content {
   padding-top: 6px;
-  verticle-align: middle;
+  vertical-align: middle;
   width: 226px;
   z-index: 10002;
+  cursor: default;
 }
 
 #turn_alert {
