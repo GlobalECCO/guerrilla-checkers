@@ -476,10 +476,14 @@ ul li.separator {
 	margin: 2px;
 }
 
-.soldier_shadow {
+.soldier_move {
+  position: absolute;
   margin: 11px;
   width: 45px;
   height: 50px;
+}
+
+.soldier_shadow {
   background-size: 50px auto;
 }
 
