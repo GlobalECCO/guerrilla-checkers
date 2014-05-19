@@ -515,18 +515,18 @@ ul li.separator {
   margin: 6px 6px 6px 7px;
 }
 
-.guerrilla_shadow {
-  width: 19px !important;
-  height: 20px !important;
-  margin: 11px 11px 12px 12px !important;
-}
-
-.guerrilla_theme_guerrilla_glow {
-  background-image: url('../images/guerrilla/guerrilla_piece_move.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
+.guerrilla_move {
   width: 19px;
   height: 20px;
+  margin: 11px 11px 12px 12px;
+  position: absolute;
+}
+
+.guerrilla_shadow {
+  background-image: url('../images/guerrilla/guerrilla_add_piece.png') !important;
+  opacity: 0.7 !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .guerrilla_side #guerrilla_reserves {
