@@ -21,6 +21,8 @@ results
 node_modules
 npm-debug.log
 run.sh
+Launch Server.bat
+guerrilla-checkers.komodoproject
 target
 bees-env.xml
 .gradle
