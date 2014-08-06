@@ -1,5 +1,5 @@
 * {
-	font-family: Arial;
+  font-family: Arial;
 }
 
 a {
@@ -7,13 +7,14 @@ a {
 }
 
 div  {
-	padding: 0px;
-	margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
-	background: #111;
+  background: #111;
   color: white;
+  margin: 0px;
 }
 
 #chat {
@@ -89,6 +90,9 @@ body {
 }
 .chat_message.coin span {
   color: rgb(63, 77, 89);
+}
+.chat_message {
+  cursor: default;
 }
 
 #settings_overlay {
@@ -297,8 +301,6 @@ ul li.separator {
   background: top left no-repeat url('../images/soldier/side.jpg');
 }
 
-
-
 .guerrilla_side #soldier_status {
   position: relative;
   width: 262px;
@@ -390,31 +392,14 @@ ul li.separator {
 }
 
 .selected {
-  -webkit-animation: myanim 1s ease-in-out infinite; /* Saf5, Chrome */
-     -moz-animation: myanim 1s ease-in-out infinite; /* FF5+ */
-       -o-animation: myanim 1s ease-in-out infinite; /* Opera 12+ */
-          animation: myanim 1s ease-in-out infinite; /* Saf5, Chrome */
+  /*background-image: url('../images/soldier/soldier_piece_highlight.png') !important;*/
+  /*background-repeat: no-repeat;*/
 }
 
-@-webkit-keyframes myanim {
-	0%, 100% { -webkit-transform: scale3d(1, 1, 1); zoom: 1; }
-	50%      { -webkit-transform: scale3d(1.2, 1.2, 1); zoom: 1; }
-}
-@-moz-keyframes myanim {
-	0%, 100% { -moz-transform: scale3d(1, 1, 1); zoom: 1; }
-	50%      { -moz-transform: scale3d(1.2, 1.2, 1); zoom: 1; }
-}
-@-o-keyframes myanim {
-	0%, 100% { -o-transform: scale3d(1, 1, 1); zoom: 1; }
-	50%      { -o-transform: scale3d(1.2, 1.2, 1); zoom: 1; }
-}
-@keyframes myanim {
-	0%, 100% { transform: scale3d(1, 1, 1); zoom: 1; }
-	50%      { transform: scale3d(1.2, 1.2, 1); zoom: 1; }
-}
 
 #soldier_moves div, #guerrilla_moves div {
   z-index: 300;
+  opacity: 0.5;
 }
 
 #pieces {
@@ -424,7 +409,64 @@ ul li.separator {
 
 #soldier_moves, #guerrilla_moves {
   visibility: hidden;
-  opacity: 0.5;
+  cursor: pointer;
+}
+
+.selectable {
+  cursor: pointer !important;
+}
+
+.pulsing {
+  -webkit-animation:pulsing 1000ms ease-in-out infinite;
+  -moz-animation:pulsing 1000ms ease-in-out infinite;
+  -ms-animation:pulsing 1000ms ease-in-out infinite;
+  -o-animation:pulsing 1000ms ease-in-out infinite;
+  animation:pulsing 1000ms ease-in-out infinite;
+}
+@keyframes pulsing {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@-o-keyframes pulsing {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes pulsing {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes pulsing {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes pulsing {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .soldier_piece {
@@ -433,9 +475,39 @@ ul li.separator {
 	height: 68px;
 	margin: 2px;
 }
-.coin_theme_soldier {
-  background: top left no-repeat url('../images/soldier/soldier_piece.png');
+
+.soldier_move {
+  position: absolute;
+  margin: 11px;
+  width: 45px;
+  height: 50px;
 }
+
+.soldier_shadow {
+  background-size: 50px auto;
+}
+
+.coin_theme_soldier {
+  background-image: url('../images/soldier/soldier_piece.png');
+  background-repeat: no-repeat;
+
+}
+.coin_theme_soldier_glow {
+  background-image: url('../images/soldier/soldier_piece_highlight.png');
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+  width: 68px;
+  height: 68px;
+}
+
+.coin_theme_soldier_ring {
+  background-image: url('../images/soldier/soldier_piece_ring.png');
+  background-repeat: no-repeat;
+  width: 68px;
+  height: 68px;
+  margin: 0px;
+}
+
 .guerrilla_theme_soldier {
   background: top left no-repeat url('../images/guerrilla/soldier_piece.png');
 }
@@ -446,10 +518,19 @@ ul li.separator {
   height: 30px;
   margin: 6px 6px 6px 7px;
 }
+
+.guerrilla_move {
+  width: 19px;
+  height: 20px;
+  margin: 11px 11px 12px 12px;
+  position: absolute;
+}
+
 .guerrilla_shadow {
-  width: 19px !important;
-  height: 20px !important;
-  margin: 11px 11px 11px 12px !important;
+  background-image: url('../images/guerrilla/guerrilla_add_piece.png') !important;
+  opacity: 0.7 !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .guerrilla_side #guerrilla_reserves {
@@ -461,11 +542,11 @@ ul li.separator {
   z-index: 1000;
 }
 
-.guerrilla_side .guerrilla_reserve {
-  width: 25px !important;
-  height: 25px !important;
-  margin: 0px !important;
-  background-size: 100% !important;
+.guerrilla_reserve {
+  width: 25px;
+  height: 25px;
+  margin: 0px;
+  background-size: 100%;
 }
 
 .coin_side #guerrilla_reserves {
@@ -520,7 +601,8 @@ ul li.separator {
 }
 
 .guerrilla_theme_guerrilla {
-  background: top left no-repeat url('../images/guerrilla/guerrilla_piece.png');
+  background-image: url('../images/guerrilla/guerrilla_piece.png');
+  background-repeat: no-repeat;
   background-size: 100%;
 }
 
@@ -580,9 +662,10 @@ ul li.separator {
 
 .dashboard_section .content {
   padding-top: 6px;
-  verticle-align: middle;
+  vertical-align: middle;
   width: 226px;
   z-index: 10002;
+  cursor: default;
 }
 
 #turn_alert {
