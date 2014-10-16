@@ -10,5 +10,6 @@ var logger = new winston.Logger({
     ]
 });
 
+logger.info("Logging started in game.");
 
 exports.logger = logger;
