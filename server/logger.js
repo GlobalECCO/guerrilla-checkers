@@ -1,15 +1,14 @@
-define(['winston'], function(winston) {
+var winston = require('winston');
 
-  winston.cli();
-
-  var logger = new winston.Logger({
-    transports: [
-      new winston.transports.Console({level: 'error', timestamp: true})
-      new winston.transports.File({level: 'verbose', timestamp: true, filename: "logs/gc.log"})
+var logger = new winston.Logger({
+  transports: [
+    new winston.transports.Console({level: 'error', timestamp: true})
+    new winston.transports.File({level: 'verbose', timestamp: true, filename: "log/game.log"})
+  ]
+  exceptionHandlers: [
+      new winston.transports.File({ filename: 'log/game_exceptions.log' })
     ]
-  });
-
-  logger.cli();
-
-  return logger;
 });
+
+
+exports.logger = logger;
