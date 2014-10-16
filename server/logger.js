@@ -4,7 +4,8 @@ define(['winston'], function(winston) {
 
   var logger = new winston.Logger({
     transports: [
-      new winston.transports.Console({level: 'verbose', timestamp: true})
+      new winston.transports.Console({level: 'error', timestamp: true})
+      new winston.transports.File({level: 'verbose', timestamp: true, filename: "logs/gc.log"})
     ]
   });
 
